@@ -10,10 +10,7 @@ describe("Stack", function() {
 
   describe('#instance methods', function() {
 
-    var myStack;
-
     beforeEach(function() {
-      myStack = new Stack();
     });
 
     describe("when pushing an object", function() {
@@ -22,12 +19,8 @@ describe("Stack", function() {
 
       describe("and the capacity is exceeded", function() {
 
-        var smallStack;
 
         beforeEach(function() {
-          smallStack = new Stack(2);
-          smallStack.push("1");
-          smallStack.push("2");
         });
 
         it('should call the grow method')
@@ -40,13 +33,7 @@ describe("Stack", function() {
 
     describe("when popping an object", function() {
 
-      var myStack;
-
       beforeEach(function() {
-        myStack = new Stack();
-        myStack.push('thing 1');
-        myStack.push('thing 2');
-        myStack.push('thing 3');
       });
 
       it('should return the object off the top of the stack')
